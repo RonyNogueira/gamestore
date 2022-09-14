@@ -1,0 +1,21 @@
+.recomendation{
+    padding: 0 30px;
+    &__big{
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    &__small{
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        padding: 10px;
+    }
+    
+    &__box{
+        padding: 0 5px;
+        margin-top: -10px;
+        
+    }
+
+}

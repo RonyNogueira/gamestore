@@ -1,0 +1,71 @@
+.carrousel{
+    margin: 30px 0;
+    .slick-slider {
+        .slick-prev,.slick-next{
+            display: none!important;
+        }
+    }
+  
+    &__content{
+        position: relative;
+        cursor: pointer;
+        &__rating{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            background: #673AB7;  
+            background: -webkit-linear-gradient(to right, #9361ca, #6021bf);  
+            background: linear-gradient(to right, #9361ca, #6021bf); 
+            
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            position: absolute;
+            font-size: 30px;
+            border: 2px solid #e4e4e4;
+            top: 10px;
+            left: -20px;
+            z-index: 9;
+        }
+
+        &__card{
+            margin-right: 40px;
+            margin-top: 30px;
+            border-radius: 18px;
+            padding: 10px 40px;
+            height: 405px;
+            background-image: url(../../assets/img/god.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: #FFF;
+            position: relative;
+            overflow: hidden;
+            &__bg{
+                background-color: #131524;
+                width: 100%;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+            &__text{
+                padding: 5px 25px 25px 25px;
+
+                h2{
+                    font-size: 25px;
+                    padding: 15px 0;
+                }
+
+                span{
+                    padding: 20px 0;
+                }
+               
+            }
+        }
+    }
+
+
+}
