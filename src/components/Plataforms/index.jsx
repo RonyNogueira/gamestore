@@ -1,5 +1,10 @@
 import React, {useState} from "react";
-import {Box, Tabs, Tab, Grid } from "@mui/material";
+import {Box, Tabs, Tab, Grid, Typography } from "@mui/material";
+import cyber from "../../assets/img/cyber.jpg"
+import vava from "../../assets/img/vava.png"
+import fort from "../../assets/img/fort.jpg"
+import "./style.scss"
+
 
 
 
@@ -16,7 +21,7 @@ const Plataforms = ()=>{
             aria-labelledby={`simple-tab-${index}`}
           >
             {value === index && (
-              <Box sx={{ p: 3 }}>
+              <Box>
                {children}
               </Box>
             )}
@@ -37,10 +42,15 @@ const Plataforms = ()=>{
       };
     
       return (
-        <Grid>
-            <Box sx={{ width: '100%' }}>
-            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                <Tabs value={value} onChange={handleChange}>
+        <Grid width={"100%"}>
+          <Grid container padding={3}>
+                <Typography variant="h4" >
+                  Top games by platform
+                </Typography>
+            </Grid>
+            <Box className="tabs">
+            <Box sx={{ borderBottom: 1, borderColor: 'divider'}}>
+                <Tabs value={value} onChange={handleChange} >
                 <Tab label="Pc" {...a11yProps(0)} />
                 <Tab label="Xbox" {...a11yProps(1)} />
                 <Tab label="PlayStation" {...a11yProps(2)} />
@@ -48,15 +58,134 @@ const Plataforms = ()=>{
             </Box>
 
             <TabPanel value={value} index={0}>
-                Item One
+                <Box className="category --pc">
+                    <Grid container >
+                        <Grid  className="category__tier">
+                          <Box className="category__tier__game">
+
+                            <img src={cyber} alt="" />
+                            <Box>
+                                <Typography variant="h5" component={"h2"}>
+                                  Cyberpunk 2077
+                                </Typography>
+                  
+                            </Box>
+
+                          </Box>
+                          <Box className="category__tier__game">
+                            
+                              <img src={vava} alt="" />
+                              <Box>
+
+                                <Typography variant="h5" component={"h2"}>
+                                  Valorant
+                                </Typography>
+                    
+                              </Box>
+                          </Box>
+
+                          <Box className="category__tier__game">
+                            <img src={fort} alt="" />
+                            <Box>
+                                <Typography variant="h5" component={"h2"}>
+                                  Fortnite
+                                </Typography>
+                  
+                            </Box>
+                          </Box>
+                        </Grid>
+                    </Grid>
+                </Box>
             </TabPanel>
 
             <TabPanel value={value} index={1}>
-                Item Two
+            <Box className="category --xbox">
+                    <Grid container >
+                        <Grid  className="category__tier">
+                          <Box className="category__tier__game">
+
+                            <img src={cyber} alt="" />
+
+                            <Box>
+                                <Typography variant="h5">
+                                  Cyberpunk 2077
+                                </Typography>
+                  
+                                <Typography variant="h5">
+                                  Rating: 30/100
+                                </Typography>
+                            </Box>
+                    
+
+                          </Box>
+                          <Box className="category__tier__game">
+                            
+                              <img src={fort} alt="" />
+                              <Typography variant="h5">
+                                Cyberpunk 2077
+                              </Typography>
+              
+                              <Typography variant="h5">
+                                Rating: 30/100
+                              </Typography>
+                          </Box>
+
+                          <Box className="category__tier__game">
+                            <img src={vava} alt="" />
+                              <Typography variant="h5">
+                                Cyberpunk 2077
+                              </Typography>
+                
+                              <Typography variant="h5">
+                                Rating: 30/100
+                              </Typography>
+                          </Box>
+                        </Grid>
+                    </Grid>
+                </Box>
             </TabPanel>
 
             <TabPanel value={value} index={2}>
-                Item Three
+            <Box className="category --ps">
+                    <Grid container >
+                        <Grid  className="category__tier">
+                          <Box className="category__tier__game">
+
+                            <img src={vava} alt="" />
+                            <Typography variant="h5">
+                              Cyberpunk 2077
+                            </Typography>
+              
+                            <Typography variant="h5">
+                              Rating: 30/100
+                            </Typography>
+
+                          </Box>
+                          <Box className="category__tier__game">
+                            
+                              <img src={fort} alt="" />
+                              <Typography variant="h5">
+                                Cyberpunk 2077
+                              </Typography>
+              
+                              <Typography variant="h5">
+                                Rating: 30/100
+                              </Typography>
+                          </Box>
+
+                          <Box className="category__tier__game">
+                            <img src={cyber} alt="" />
+                              <Typography variant="h5">
+                                Cyberpunk 2077
+                              </Typography>
+                
+                              <Typography variant="h5">
+                                Rating: 30/100
+                              </Typography>
+                          </Box>
+                        </Grid>
+                    </Grid>
+                </Box>
             </TabPanel>
 
             </Box>

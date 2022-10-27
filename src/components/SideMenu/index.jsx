@@ -29,7 +29,7 @@ const SideMenu = ({toggle})=>{
                         </Link>
                     </li>
                     <li>
-                    <Link className="side__menu__links__link" to={'/'}>
+                    <Link className="side__menu__links__link" to={'/details'}>
                             <img src={graph} alt="" />
                         </Link>
                     </li>

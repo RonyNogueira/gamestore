@@ -1,6 +1,6 @@
 import { Box, Grid } from "@mui/material";
 import React from "react";
-import { MostViewed, Carrousel, Recomendation, Footer, Parallax, Plataforms } from "../components";
+import { MostViewed, Carrousel, Footer, Parallax, Plataforms } from "../../components";
 
 const Home = ()=>{
     return(
@@ -12,9 +12,6 @@ const Home = ()=>{
              </Box>
              <Box>
                 <Parallax/>
-             </Box>
-             <Box>
-                <Recomendation/>
              </Box>
             <Box>
                <MostViewed/>

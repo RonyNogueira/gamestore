@@ -4,7 +4,6 @@ import Carrousel from "./Carrousel"
 import Footer from "./Footer"
 import Header from "./Header"
 import MostViewed from "./MostViewed"
-import Recomendation from "./Recommendation"
 import SideMenu from "./SideMenu"
 import Parallax from "./Parallax"
 import Plataforms from "./Plataforms"
@@ -17,7 +16,6 @@ export {
     Footer, 
     Header, 
     MostViewed, 
-    Recomendation,
     SideMenu,
     Parallax,
     Plataforms
