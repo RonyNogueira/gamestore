@@ -5,30 +5,34 @@ import Pages from './pages';
 import SideMenu from './components/SideMenu';
 import Header from './components/Header';
 import { Grid } from '@mui/material';
-import  {useState} from 'react'
+import { store } from './store'
+import { Provider} from 'react-redux'
 
 
 function App() {
-  const [toggle, setToggle] = useState(false)
-  return (
-    <BrowserRouter>
+
   
-          <Grid container sx={12} md={12}>
-          
-              <Grid md={1} item sx={{ display: { sm: 'block', xs: 'block' } }}>
-                <SideMenu toggle={toggle}/>
-              </Grid>
-
-              <Grid item xs={12} md={11}>
-                <Header setToggle={setToggle} toggle={toggle}/>
-                <Pages/>
-              </Grid>
-              
-          </Grid>
-
+  return (
+    <Provider store={store}>
+        <BrowserRouter>
       
-     
-    </BrowserRouter>
+              <Grid container sx={12} md={12}>
+              
+                  <Grid md={1} item sx={{ display: { sm: 'block', xs: 'block' } }}>
+                    <SideMenu />
+                  </Grid>
+
+                  <Grid item xs={12} md={11}>
+                    <Header  />
+                    <Pages/>
+                  </Grid>
+                  
+              </Grid>
+
+          
+        
+        </BrowserRouter>
+    </Provider>
   );
 }
 

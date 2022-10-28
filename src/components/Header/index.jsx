@@ -8,9 +8,13 @@ import {AppBar,
         InputBase,  
        } from "@mui/material"
 import "./style.scss"
+import { useDispatch, useSelector } from 'react-redux'
+import { openSideMenu } from "../../redux/actions/menu/menuActions";
 
-const Header = ({setToggle, toggle})=>{
-    
+
+const Header = ()=>{
+    const { isOpenMenu } = useSelector((state)=> state.menuReducer)
+    const dispatch = useDispatch()
 
     return(
     <Box sx={{ flexGrow: 1 }}>
@@ -40,7 +44,7 @@ const Header = ({setToggle, toggle})=>{
             </Box>
 
             <Button color="inherit">Login</Button>
-            <Button style={{ textAlign: 'right'}} onClick={()=>setToggle(!toggle)} color="inherit">MENU</Button>
+            <Button style={{ textAlign: 'right'}} onClick={()=>dispatch(openSideMenu(!isOpenMenu))} color="inherit">MENU</Button>
             </Toolbar>
         </AppBar>
         

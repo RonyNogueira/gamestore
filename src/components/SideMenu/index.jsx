@@ -6,11 +6,14 @@ import home from "../../assets/img/home.png"
 import games from "../../assets/img/games.png"
 import graph from "../../assets/img/grafico.png"
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 
-const SideMenu = ({toggle})=>{
+const SideMenu = ()=>{
+    const { isOpenMenu } = useSelector((state)=> state.menuReducer)
+
     return(
-        <Box  className={`side__menu  ${toggle && 'toggle'}`}>
+        <Box  className={`side__menu  ${isOpenMenu && 'toggle'}`}>
 
             <Box className="side__menu__avatar">
                 <img src={avatar} alt="" />
