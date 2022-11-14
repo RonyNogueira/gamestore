@@ -1,8 +1,16 @@
 import * as actionTypes from '../actionTypes'
 
-export const openSideMenu = (openMenu) => {
+export const openSideMenu = (openMenu,banana) => {
     return {
         type: actionTypes.OPEN_SIDE_MENU,
-        openMenu
+        openMenu,
+        banana
+    }
+}
+
+export const counterAction = () =>{
+    return {
+        type: actionTypes.ADD_COUNT,
+        
     }
 }

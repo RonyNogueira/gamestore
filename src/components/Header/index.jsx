@@ -44,7 +44,7 @@ const Header = ()=>{
             </Box>
 
             <Button color="inherit">Login</Button>
-            <Button style={{ textAlign: 'right'}} onClick={()=>dispatch(openSideMenu(!isOpenMenu))} color="inherit">MENU</Button>
+            <Button style={{ textAlign: 'right'}} onClick={()=>dispatch(openSideMenu(!isOpenMenu, 'banana'))} color="inherit">MENU</Button>
             </Toolbar>
         </AppBar>
         
